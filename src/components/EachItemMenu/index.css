@@ -1,0 +1,153 @@
+.dish-each-sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 7px;
+  margin-bottom: 1%;
+  padding: 1%;
+}
+
+.red-or-green-and-dish-info-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+
+.red-and-green-container {
+  padding-right: 1%;
+}
+
+.dish-info-container {
+  padding-left: 1%;
+}
+
+.item-title {
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 0px;
+}
+
+.price {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.dish-description {
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 500;
+  color: gray;
+  width: 85%;
+}
+
+.customizations {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  color: blue;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: green;
+  border-radius: 30px;
+  height: 50px;
+  width: 100px;
+}
+
+.minus-button {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  font-family: 'Roboto';
+}
+
+.plus-button {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  font-family: 'Roboto';
+}
+
+.minus-icon {
+  color: #ffffff;
+}
+
+.count-para {
+  color: #ffffff;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dish-image-and-calories-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.calories-container {
+}
+
+.calories-para {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  color: orange;
+}
+
+.dish-image-container {
+}
+
+.dish-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 7px;
+}
+
+.not-available {
+  font-family: 'Roboto';
+  font-size: 13px;
+  font-weight: 500;
+  color: red;
+}
+
+.each-button-list {
+}
+
+.each-button-slider {
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #000000;
+  padding: 5%;
+  width: 200px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+.change-each-button-slider {
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: orange;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid orange;
+  padding: 5%;
+  width: 200px;
+  cursor: pointer;
+}
