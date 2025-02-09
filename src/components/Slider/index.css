@@ -25,3 +25,13 @@
   width: 200px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .each-button-slider {
+    padding: 2%;
+  }
+
+  .change-each-button-slider {
+    padding: 2%;
+  }
+}

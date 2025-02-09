@@ -32,3 +32,27 @@
 .cart-icon {
   font-size: 30px;
 }
+
+.navbar-header-link {
+  text-decoration: none;
+}
+
+.cart-header-button {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-title {
+    font-size: 20px;
+  }
+
+  .my-orders-para {
+    font-size: 15px;
+  }
+
+  .cart-icon {
+    font-size: 25px;
+  }
+}

@@ -151,3 +151,61 @@
   width: 200px;
   cursor: pointer;
 }
+
+.add-to-cart-button {
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #000000;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: blue;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .dish-each-sub-container {
+    flex-direction: column;
+    margin-bottom: 3%;
+  }
+
+  .red-or-green-and-dish-info-container {
+    order: 2;
+    width: 100%;
+  }
+
+  .dish-image-and-calories-container {
+    order: 1;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .item-title {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .dish-description {
+    font-size: 12px;
+    width: 60%;
+  }
+
+  .customizations {
+    font-size: 12px;
+  }
+
+  .add-to-cart-button {
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+  }
+}

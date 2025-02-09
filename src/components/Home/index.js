@@ -95,17 +95,15 @@ class Home extends Component {
       foodItemsDetails,
       activeButton,
       itemQuantities,
-      cartCount,
       itemsCategoryList,
     } = this.state
-
     const filteredFoodItemsArray = foodItemsDetails.filter(
       each => each.menuCategoryId === activeButton,
     )
 
     return (
       <div className="home-main-container">
-        <Navbar cartCount={cartCount} />
+        <Navbar />
         <ul className="buttons-ul-list-container">
           {itemsCategoryList.map(each => (
             <Slider

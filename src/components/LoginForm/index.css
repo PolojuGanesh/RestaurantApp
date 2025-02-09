@@ -1,0 +1,86 @@
+.login-form-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.sub-form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+  margin-bottom: 5%;
+}
+
+.form-input:focus {
+  border-color: #007bff;
+}
+
+.login-button-container {
+  margin-top: 1.5rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background: #0056b3;
+}
+
+.error-msg-para {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .sub-form-container {
+    padding: 1.5rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .form-input,
+  .login-button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
