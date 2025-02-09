@@ -3,10 +3,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  background-color: #ffffff;
   padding-left: 2%;
   padding-right: 2%;
   width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .navbar-title {

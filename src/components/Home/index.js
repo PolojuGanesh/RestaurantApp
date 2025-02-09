@@ -1,16 +1,24 @@
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 import Slider from '../Slider'
 import EachItemMenu from '../EachItemMenu'
 import Navbar from '../Navbar'
 import './index.css'
+
+const apiStatusConstants = {
+  initial: 'INITIAL',
+  success: 'SUCCESS',
+  inProgress: 'INPROGRESS',
+  failure: 'FAILURE',
+}
 
 class Home extends Component {
   state = {
     itemsCategoryList: [],
     foodItemsDetails: [],
     activeButton: '',
-    itemQuantities: {}, // Stores quantity per dish
-    cartCount: 0, // Stores total items in cart
+    itemQuantities: {},
+    apiStatus: apiStatusConstants.initial,
   }
 
   componentDidMount() {
@@ -51,17 +59,18 @@ class Home extends Component {
       foodItemsDetails: updatedFoodItemDetails,
       activeButton: updatedData[0]?.menuCategoryId || '',
       itemQuantities: initialQuantities,
-      cartCount: 0,
     })
   }
 
   getHomeData = async () => {
+    this.setState({apiStatus: apiStatusConstants.inProgress})
     const url =
       'https://apis2.ccbp.in/restaurant-app/restaurant-menu-list-details'
     const options = {method: 'GET'}
 
     const response = await fetch(url, options)
     if (response.ok) {
+      this.setState({apiStatus: apiStatusConstants.success})
       const data = await response.json()
       this.onSuccess(data)
     }
@@ -90,7 +99,7 @@ class Home extends Component {
     })
   }
 
-  render() {
+  renderSuccessView = () => {
     const {
       foodItemsDetails,
       activeButton,
@@ -102,8 +111,7 @@ class Home extends Component {
     )
 
     return (
-      <div className="home-main-container">
-        <Navbar />
+      <>
         <ul className="buttons-ul-list-container">
           {itemsCategoryList.map(each => (
             <Slider
@@ -126,6 +134,34 @@ class Home extends Component {
             )),
           )}
         </ul>
+      </>
+    )
+  }
+
+  renderLoadingView = () => (
+    <div className="loading-container">
+      <Loader type="ThreeDots" height="50" width="50" color="blue" />
+    </div>
+  )
+
+  renderSwitchCase = () => {
+    const {apiStatus} = this.state
+
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderSuccessView()
+      case apiStatusConstants.inProgress:
+        return this.renderLoadingView()
+      default:
+        return null
+    }
+  }
+
+  render() {
+    return (
+      <div className="home-main-container">
+        <Navbar />
+        {this.renderSwitchCase()}
       </div>
     )
   }

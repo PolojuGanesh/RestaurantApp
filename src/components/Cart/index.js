@@ -16,7 +16,7 @@ class Cart extends Component {
       <CartContext.Consumer>
         {value => {
           const {cartList, removeAllCartItems} = value
-          console.log(cartList)
+
           const clickOnRemoveAllCartItems = () => {
             removeAllCartItems()
           }
