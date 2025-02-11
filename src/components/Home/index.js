@@ -43,6 +43,7 @@ class Home extends Component {
         dishCalories: eachItem.dish_calories,
         dishDescription: eachItem.dish_description,
         dishAvailability: eachItem.dish_Availability,
+        dishType: eachItem.dish_Type,
         hasAddons: eachItem.addonCat && eachItem.addonCat.length > 0,
       })),
     }))

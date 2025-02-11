@@ -165,14 +165,42 @@
 }
 
 .add-to-cart-button:hover {
-  background-color: blue;
+  background-color: orange;
   color: #ffffff;
+}
+
+.red-container {
+  border: 1px solid red;
+  padding: 1%;
+}
+
+.green-container {
+  border: 1px solid green;
+  padding: 1%;
+}
+
+.red-circle {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.green-circle {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 767px) {
   .dish-each-sub-container {
     flex-direction: column;
     margin-bottom: 3%;
+  }
+
+  .dish-info-container {
+    margin-left: 2%;
   }
 
   .red-or-green-and-dish-info-container {

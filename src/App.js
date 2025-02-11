@@ -1,10 +1,11 @@
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import {Component} from 'react'
 
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
 import LoginForm from './components/LoginForm'
 import Cart from './components/Cart'
+import NotFound from './components/NotFound'
 import CartContext from './context/CartContext'
 
 import './App.css'
@@ -84,9 +85,11 @@ class App extends Component {
       >
         <BrowserRouter>
           <Switch>
-            <Route path="/login" component={LoginForm} />
+            <Route exact path="/login" component={LoginForm} />
             <ProtectedRoute exact path="/" component={Home} />
             <ProtectedRoute exact path="/cart" component={Cart} />
+            <Route exact path="/not-found" component={NotFound} />
+            <Redirect to="/not-found" />
           </Switch>
         </BrowserRouter>
       </CartContext.Provider>

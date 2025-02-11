@@ -81,18 +81,23 @@
 }
 
 .shop-now-btn {
-  background-color: #0b69ff;
-  color: #ffffff;
+  background-color: transparent;
+  color: #000000;
   font-family: 'Roboto';
   font-size: 12px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #000000;
   padding-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 16px;
   outline: none;
   cursor: pointer;
+}
+
+.shop-now-btn:hover {
+  background-color: orange;
+  color: #ffffff;
 }
 
 .cart-empty-view-container {

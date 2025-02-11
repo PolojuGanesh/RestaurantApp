@@ -14,6 +14,7 @@ const EachItemMenu = props => {
     dishDescription,
     dishAvailability,
     hasAddons,
+    dishType,
   } = eachItem
 
   const decreaseQuantity = () => {
@@ -37,6 +38,13 @@ const EachItemMenu = props => {
         return (
           <li className="dish-each-sub-container">
             <div className="red-or-green-and-dish-info-container">
+              <div
+                className={dishType !== 2 ? 'red-container' : 'green-container'}
+              >
+                <div
+                  className={dishType !== 2 ? 'red-circle' : 'green-circle'}
+                />
+              </div>
               <div className="dish-info-container">
                 <h1 className="item-title">{dishName}</h1>
                 <p className="price">{`${dishCurrency} ${dishPrice}`}</p>

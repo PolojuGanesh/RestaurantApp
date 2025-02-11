@@ -26,6 +26,7 @@ class Cart extends Component {
               {showEmptyView ? null : (
                 <div className="remove-all-button-container">
                   <button
+                    type="button"
                     data-testid="remove"
                     onClick={clickOnRemoveAllCartItems}
                     className="remove-all-button"
@@ -50,6 +51,7 @@ class Cart extends Component {
                     />
                     <p className="cart-empty-heading">Your Cart is Empty</p>
                     <button
+                      type="button"
                       onClick={this.noItemAddedShopNow}
                       className="shop-now-btn"
                     >

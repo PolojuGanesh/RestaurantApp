@@ -1,11 +1,19 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
 import {IoCartOutline} from 'react-icons/io5'
-import {Link} from 'react-router-dom'
+import {FiLogOut} from 'react-icons/fi'
+import {Link, withRouter} from 'react-router-dom'
 import CartContext from '../../context/CartContext'
 
 import './index.css'
 
 class Navbar extends Component {
+  clickOnLogout = () => {
+    const {history} = this.props
+    Cookies.remove('jwt_token')
+    history.replace('/login')
+  }
+
   render() {
     return (
       <CartContext.Consumer>
@@ -25,6 +33,20 @@ class Navbar extends Component {
                   </button>
                 </Link>
                 <p className="cart-count">{cartList.length}</p>
+                <button
+                  onClick={this.clickOnLogout}
+                  type="button"
+                  className="logout"
+                >
+                  Logout
+                </button>
+                <button
+                  onClick={this.clickOnLogout}
+                  type="button"
+                  className="mobile-logout"
+                >
+                  <FiLogOut className="cart-icon" />
+                </button>
               </div>
             </nav>
           )
@@ -34,4 +56,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar
+export default withRouter(Navbar)
